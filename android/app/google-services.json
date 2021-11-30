@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8903392456",
+    "project_id": "adp-mobile-6a327",
+    "storage_bucket": "adp-mobile-6a327.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8903392456:android:c9d03bc74f3e80a05e79fd",
+        "android_client_info": {
+          "package_name": "com.example.adp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8903392456-bkd8i24cafftpddlf5h2fnrsusrln20d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1XPa01iRDiw3gsy7i28ZCG93PefR14O4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8903392456-bkd8i24cafftpddlf5h2fnrsusrln20d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
