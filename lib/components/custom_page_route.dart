@@ -8,7 +8,8 @@ class CustomPageRoute extends PageRouteBuilder {
 
   CustomPageRoute({this.direction = AxisDirection.right, required this.child})
       : super(
-    transitionDuration: Duration(seconds: 1),
+    transitionDuration: Duration(milliseconds: 600),
+      reverseTransitionDuration: Duration(milliseconds: 600),
       pageBuilder: (context, animation, secondaryAnimation) => child);
 
   @override
@@ -17,6 +18,7 @@ class CustomPageRoute extends PageRouteBuilder {
       SlideTransition(
         position: Tween<Offset>(
           begin: getBeginOffset(),
+          end: Offset.zero
         ).animate(animation),
         child: child,
       );

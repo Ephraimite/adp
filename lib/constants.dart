@@ -13,13 +13,10 @@ const kCOLOR_LIGHT_GREY = Color(0xffececec);
 const kCOLOR_GREY = Color(0xffABA9A9);
 
 const List<String> categoryList = [
-  'Native Soups',
-  'Fried foods',
-  'Seafoods',
-  'Deserts',
-  'Grills',
-  'Snacks',
-  'Pancake & Waffles',
+  'National Chairman',
+  'State Governor',
+  'Local govt chairman',
+  'House of assembly'
 ];
 
 final sliderImage = [
@@ -94,6 +91,21 @@ const kTextFieldDecoration = InputDecoration(
 
 const kInputTextFieldDecoration = InputDecoration(
   prefixIcon: Icon(Icons.search, color: Colors.grey),
+  contentPadding: EdgeInsets.all(10.0),
+  filled: true,
+  focusColor: kCOLOR_PRIMARY,
+  fillColor: kCOLOR_LIGHT_GREY,
+  hintText: 'search',
+  hintStyle: TextStyle(
+    color: Colors.grey,
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+    borderSide: BorderSide.none,
+  ),
+);
+
+const kInputProfileDecoration = InputDecoration(
   contentPadding: EdgeInsets.all(10.0),
   filled: true,
   focusColor: kCOLOR_PRIMARY,

@@ -29,24 +29,23 @@ class _LoginScreenState extends State<LoginScreen> {
   final formKey = GlobalKey<FormState>();
   final UsersModel _usersModel = UsersModel();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  var memberId ='';
-  var name ='';
+  var memberId = '';
+  var name = '';
 
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
   Widget build(BuildContext context) {
     AuthState _authenticationProvider =
-    Provider.of<AuthState>(context, listen: false);
+        Provider.of<AuthState>(context, listen: false);
     return SafeArea(
       child: Scaffold(
         backgroundColor: kCOLOR_PRIMARY,
         body: ProgressHUD(
-          backgroundColor: kCOLOR_PRIMARY,
+          backgroundColor: kCOLOR_ACCENT,
           child: Form(
             key: formKey,
             child: SingleChildScrollView(
@@ -124,9 +123,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           children: [
                             TextButton(
                               onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ForgotPassword())),
+                                context,
+                                CustomPageRoute(
+                                  child: ForgotPassword(),
+                                  direction: AxisDirection.left
+                                ),
+                              ),
                               child: const Text(
                                 'Forgot password?',
                                 style: TextStyle(
@@ -178,9 +180,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontWeight: FontWeight.bold,
                                   )),
                               onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const SignUp())),
+                                context,
+                                CustomPageRoute(
+                                    child: SignUp(),
+                                    direction: AxisDirection.left),
+                              ),
                             ),
                           ],
                         ),
@@ -205,11 +209,14 @@ class _LoginScreenState extends State<LoginScreen> {
       if (await authenticationProvider.loginUser(email, password)) {
         final progressBar = ProgressHUD.of(context);
         progressBar!.dismiss();
-        Navigator.push(context,
-            CustomPageRoute(child: BottomNavigationScreen()));
+        Navigator.push(
+          context,
+          CustomPageRoute(
+              child: BottomNavigationScreen(), direction: AxisDirection.left),
+        );
         authenticationProvider.getUserDetails(_usersModel).then((value) => {
-          pref.setString('mID', _usersModel.membershipID!),
-        });
+                  pref.setString('mID', _usersModel.membershipID!)
+            });
       } else {
         Fluttertoast.showToast(
             msg: "An error occured pls try again", backgroundColor: Colors.red);

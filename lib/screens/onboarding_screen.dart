@@ -20,34 +20,34 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         pages: [
           PageViewModel(
             title: 'Action Democratic Party ',
-            body: 'We are building the future',
+            body: 'We are building the future with digitalized tools',
             image: Center(
               child: Padding(
                 padding: const EdgeInsets.only(
                     top: 100.0, left: 20.0, right: 20.0),
-                child: Image.asset('assets/images/logo.png'),
+                child: Image.asset('assets/images/digitalized_voting.png'),
               ),
             ),
           ),
           PageViewModel(
             title: 'Action Democratic Party',
-            body: 'Unlock your Potential',
+            body: 'Unlock your Potential, vote your favourite candidate',
             image: Center(
               child: Padding(
                 padding: const EdgeInsets.only(
                     top: 100.0, left: 20.0, right: 20.0),
-                child: Image.asset('assets/images/logo.png'),
+                child: Image.asset('assets/images/favourite_candidate.png'),
               ),
             ),
           ),
           PageViewModel(
             title: 'Action Democratic Party',
-            body: 'We are building the future',
+            body: 'We are building the future, get up to date news with our mobile app',
             image: Center(
               child: Padding(
                 padding: const EdgeInsets.only(
                     top: 100.0, left: 20.0, right: 20.0),
-                child: Image.asset('assets/images/logo.png'),
+                child: Image.asset('assets/images/news.png'),
               ),
             ),
           ),

@@ -32,7 +32,7 @@ class VoteCandidateCard extends StatelessWidget {
 
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(top: 8.0),
               child: Text(
                 name,
                 style: TextStyle(
@@ -41,19 +41,13 @@ class VoteCandidateCard extends StatelessWidget {
                     fontWeight: FontWeight.w600),
               ),
             ),
-            // Text(description),
             TextButton(onPressed: (){}, child: Text('View Profile')),
 
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: RoundedButton(
-                  onPressed: () {},
-                  buttonColor: kCOLOR_PRIMARY,
-                  text: 'Vote',
-                  textColor: kCOLOR_WHITE,
-                ),
-              ),
+            RoundedButton(
+              onPressed: () {},
+              buttonColor: kCOLOR_PRIMARY,
+              text: 'Vote',
+              textColor: kCOLOR_WHITE,
             ),
           ],
         ),

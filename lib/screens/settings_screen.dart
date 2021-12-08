@@ -23,7 +23,9 @@ class _SettingScreenState extends State<SettingScreen> {
         ),
         toolbarHeight: 70,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+
+          },
           icon: Icon(
             Icons.arrow_back,
             size: 20.0,
@@ -48,7 +50,7 @@ class _SettingScreenState extends State<SettingScreen> {
             ReuseableSettingsButton(
               icon: Ionicons.information_circle,
               text: 'About',
-              
+
             ),
             ReuseableSettingsButton(icon: Ionicons.help_circle, text: 'Help'),
             ReuseableSettingsButton(icon: Ionicons.log_out, text: 'Logout')

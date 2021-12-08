@@ -1,4 +1,7 @@
 import 'package:adp/auth_state.dart';
+import 'package:adp/screens/e_voting_screen/e_voting_main.dart';
+import 'package:adp/screens/e_voting_screen/vote_result_tab.dart';
+import 'package:adp/screens/news_feed_screen/feeds_main.dart';
 import 'package:adp/screens/sign_up.dart';
 import 'package:adp/screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';

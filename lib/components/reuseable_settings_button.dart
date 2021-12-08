@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ionicons/ionicons.dart';
 
 import '../constants.dart';
@@ -15,7 +16,9 @@ class ReuseableSettingsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: (){
+        Fluttertoast.showToast(msg: 'Item Clicked');
+      },
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Container(

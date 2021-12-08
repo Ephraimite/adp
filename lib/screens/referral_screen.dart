@@ -16,22 +16,15 @@ class _ReferralScreenState extends State<ReferralScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Referrals',
-          style: TextStyle(
-            color: kCOLOR_PRIMARY,
-          ),
-        ),
+        iconTheme: IconThemeData(color: kCOLOR_PRIMARY),
         toolbarHeight: 70,
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.arrow_back,
-            size: 20.0,
-            color: kCOLOR_PRIMARY,
-          ),
+        title: Text(
+          'Referrals',
+          style: TextStyle(color: kCOLOR_PRIMARY),
         ),
+        elevation: 0,
+        backgroundColor: Colors.white,
         actions: const [
           Padding(
             padding: EdgeInsets.all(10.0),
@@ -42,8 +35,7 @@ class _ReferralScreenState extends State<ReferralScreen> {
             ),
           ),
         ],
-        backgroundColor: Colors.white,
-        elevation: 0,
+
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

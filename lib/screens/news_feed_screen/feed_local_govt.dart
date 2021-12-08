@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-class FeedStateScreen extends StatefulWidget {
-  const FeedStateScreen({Key? key}) : super(key: key);
+class FeedLocalGovtTab extends StatefulWidget {
+  const FeedLocalGovtTab({Key? key}) : super(key: key);
 
   @override
-  _FeedStateScreenState createState() => _FeedStateScreenState();
+  _FeedLocalGovtTabState createState() => _FeedLocalGovtTabState();
 }
 
-class _FeedStateScreenState extends State<FeedStateScreen> {
+class _FeedLocalGovtTabState extends State<FeedLocalGovtTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,6 @@ class _FeedStateScreenState extends State<FeedStateScreen> {
           fontWeight: FontWeight.bold,
         ),),
       ),
-
     );
   }
 }

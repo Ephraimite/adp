@@ -1,15 +1,14 @@
 
-import 'package:adp/constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ReuseableReferralList extends StatelessWidget {
-  int? number;
-  String? name;
-  String? date;
+class ReuseableVotingResultListItem extends StatelessWidget {
+
+  final String? image;
+  final String? name;
+  final String? date;
 
 
-  ReuseableReferralList({ this.number, this.name, this.date});
+   ReuseableVotingResultListItem({this.image, this.name, this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +17,9 @@ class ReuseableReferralList extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('$number'),
+              // Text('$image'),
               Text(name!),
               Text(date!),
             ],
